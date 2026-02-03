@@ -136,10 +136,10 @@
                         <div class="dropdown-menu"><a class="text-white dropdown-item text-primary display-4"
                                 href="TracerStudy.html" aria-expanded="false">Halaman&nbsp;</a><a
                                 class="text-white dropdown-item text-primary display-4"
-                                href="http://ppm.poltekpar-nhi.ac.id/HasilTracerStudyAlumni.php"
+                                href="http://ppm.poltekpar-nhi.ac.id/HasilTracerStudyAlumni.html"
                                 aria-expanded="false">Hasil Penilaian Alumni</a><a
                                 class="text-white dropdown-item text-primary display-4"
-                                href="http://ppm.poltekpar-nhi.ac.id/HasilTracerStudyUser.php"
+                                href="http://ppm.poltekpar-nhi.ac.id/HasilTracerStudyUser.html"
                                 aria-expanded="false">Hasil Penilaian User</a></div>
                     </li>
                     <li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="#"
@@ -151,7 +151,7 @@
                                 class="text-white dropdown-item text-primary display-4"
                                 href="EvaluasiDosendanProgramStudi.html" aria-expanded="false">Evaluasi Dosen &amp;
                                 Prodi</a><a class="text-white dropdown-item text-primary display-4"
-                                href="http://ppm.poltekpar-nhi.ac.id/HasilPenilaianProgramStudi.php"
+                                href="http://ppm.poltekpar-nhi.ac.id/HasilPenilaianProgramStudi.html"
                                 aria-expanded="false">Penilaian Prorgam Studi</a></div>
                     </li>
                 </ul>
@@ -173,15 +173,19 @@
                     <!-- <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-2">
                         Selamat Datang&nbsp;di Website<br>Pusat Penjaminan Mutu<br>POLTEKPAR NHI BANDUNG</h1> -->
 
-                        <div class="mb-6">
-                    <p class="text-cyan-100 font-medium mb-3 opacity-90 drop-shadow-md" style="font-size: clamp(1.5rem, 3vw, 2.5rem) !important;">Selamat Datang di Website</p>
-                    <h1 class="font-extrabold pb-4 leading-[1.05]">
-                        <span class="text-gradient" style="font-size: clamp(3.5rem, 8vw, 5rem) !important; display: block;">Pusat Penjaminan Mutu</span>
-                        <span class="text-white tracking-wide opacity-95" style="font-size: clamp(1.8rem, 4vw, 3.5rem) !important;">POLTEKPAR NHI BANDUNG</span>
-                    </h1>
-                </div>
+                    <div class="mb-6">
+                        <p class="text-cyan-100 font-medium mb-3 opacity-90 drop-shadow-md"
+                            style="font-size: clamp(1.5rem, 3vw, 2.5rem) !important;">Selamat Datang di Website</p>
+                        <h1 class="font-extrabold pb-4 leading-[1.05]">
+                            <span class="text-gradient"
+                                style="font-size: clamp(3.5rem, 8vw, 5rem) !important; display: block;">Pusat Penjaminan
+                                Mutu</span>
+                            <span class="text-white tracking-wide opacity-95"
+                                style="font-size: clamp(1.8rem, 4vw, 3.5rem) !important;">POLTEKPAR NHI BANDUNG</span>
+                        </h1>
+                    </div>
 
-                </h1>
+                    </h1>
 
                     <p class="mbr-text pb-3 mbr-fonts-style display-7">Pusat Penjaminan Mutu (PPM) - Politeknik
                         Pariwisata NHI Bandung&nbsp;<br>Pusat Penjaminan Mutu (PPM) merupakan pusat pelayanan
@@ -207,9 +211,10 @@
             <div class="filter-container hide-scrollbar">
                 <button onclick="filterNews('Semua')" class="filter-tab active">Semua</button>
                 <button onclick="filterNews('ISO 9001')" class="filter-tab">ISO 9001</button>
-                <button onclick="filterNews('TeqDual')" class="filter-tab">TeqDual</button>
+                <button onclick="filterNews('TedQual')" class="filter-tab">TedQual</button>
                 <button onclick="filterNews('Tracer Study')" class="filter-tab">Tracer Study</button>
                 <button onclick="filterNews('ISO 21001')" class="filter-tab">ISO 21001</button>
+                <button onclick="filterNews('Lainnya')" class="filter-tab">Lainnya</button>
             </div>
 
             <div class="scroll-container">
@@ -226,12 +231,186 @@
                 </button>
 
                 <div id="newsSlider" class="news-slider hide-scrollbar">
-                
-                    <!-- BERITA SATU -->
+
+                    <!-- BERITA 7 -->
+                    <article onclick="openModal(this)" class="news-card" data-category="Lainnya">
+                        <div class="image-zoom">
+                            <img src="assets/images/berita/berita7_7.jpg" alt="Lainnya">
+                            <span class="category-badge bg-iso-9001">Lainnya</span>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-date">18 Desember 2025</p>
+                            <h3 class="card-title">Sosialisasi Borang Lembaga Akreditasi Mandiri (LAM)</h3>
+                            <p class="card-desc">Kegiatan sosialisasi ini menghadirkan narasumber Jacob Ganef Pah, Drs.,
+                                MT., yang menyampaikan penjelasan mengenai struktur, substansi, serta teknis pengisian.
+                            </p>
+                            <!-- Data narasi panjang disimpan di hidden div atau dataset -->
+                            <div class="full-narration" style="display:none;">Bandung, 18 Desember 2025 — Pusat
+                                Penjaminan Mutu Poltekpar NHI Bandung menyelenggarakan kegiatan Sosialisasi Borang
+                                Lembaga Akreditasi Mandiri (LAM) Wisata untuk Program Studi PKA yang bertempat di Hotel
+                                Mewangi. Kegiatan ini dilaksanakan dalam rangka meningkatkan pemahaman dan kesiapan
+                                pengelola program studi dalam menghadapi proses akreditasi berbasis instrumen LAM
+                                Wisata.
+
+                                Kegiatan sosialisasi ini menghadirkan narasumber Jacob Ganef Pah, Drs., MT., yang
+                                menyampaikan penjelasan mengenai struktur, substansi, serta teknis pengisian borang LAM
+                                Wisata. Materi yang disampaikan mencakup pemetaan standar dan kriteria akreditasi,
+                                penyusunan narasi borang yang berbasis data dan bukti dukung, serta strategi pemenuhan
+                                indikator kinerja yang relevan dengan karakteristik Program Studi PKA.
+
+                                Selain pemaparan materi, kegiatan ini juga diisi dengan sesi diskusi dan tanya jawab.
+                                Peserta memperoleh kesempatan untuk mendalami berbagai aspek teknis pengisian borang,
+                                termasuk kesesuaian dokumen pendukung, penguatan data kinerja program studi, serta
+                                langkah-langkah evaluasi dan perbaikan berkelanjutan sebagai bagian dari implementasi
+                                Sistem Penjaminan Mutu Internal (SPMI).
+
+                                Melalui kegiatan sosialisasi borang LAM Wisata ini, diharapkan seluruh pemangku
+                                kepentingan Program Studi PKA memiliki pemahaman yang selaras dan terintegrasi dalam
+                                mempersiapkan dokumen akreditasi, sehingga dapat mendukung peningkatan mutu akademik dan
+                                daya saing Politeknik Pariwisata NHI Bandung secara berkelanjutan.</div>
+                        </div>
+                    </article>
+
+                    <!-- BERITA 6 -->
+                    <article onclick="openModal(this)" class="news-card" data-category="ISO 21001">
+                        <div class="image-zoom">
+                            <img src="assets/images/berita/berita4_1.jpeg" alt="ISO 21001">
+                            <span class="category-badge bg-iso-21001">ISO 21001</span>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-date">3 November - 4 November 2025</p>
+                            <h3 class="card-title">Surveilance ISO 21001:2018</h3>
+                            <p class="card-desc">Tujuan dari kegiatan ini adalah untuk memastikan bahwa Poltekpar
+                                NHI Bandung tetap.</p>
+                            <div class="full-narration" style="display:none;">Kegiatan Surveillance ISO 21001:2018 di
+                                Politeknik Pariwisata NHI Bandung dilaksanakan pada tanggal 3-4 November 2025 dan
+                                dipimpin oleh auditor, Ibu Renatha Hutapea. Audit ini dilakukan secara sampling,
+                                mencakup Program Studi DIK, SKU, PPH, PKA, Unit Perpustakaan, Unit TI&Komblik, serta
+                                Unit ICC. Tujuan dari kegiatan ini adalah untuk memastikan bahwa Poltekpar NHI Bandung
+                                tetap mematuhi standar sistem manajemen mutu ISO 21001:2018, serta mengevaluasi berbagai
+                                aspek yang ada di program studi dan unit-unit tersebut.
+
+                                Dari hasil audit, auditor memberikan beberapa rekomendasi perbaikan yang berfokus pada
+                                peningkatan mutu di berbagai sektor. Rekomendasi tersebut diharapkan dapat menjadi dasar
+                                untuk perbaikan berkelanjutan di Poltekpar NHI Bandung, sehingga dapat meningkatkan
+                                kualitas sistem manajemen mutu yang ada dan mendukung pengembangan pendidikan serta
+                                layanan yang lebih efisien dan efektif di masa mendatang.
+                            </div>
+                    </article>
+
+                    <!-- BERITA 5 -->
+                    <article onclick="openModal(this)" class="news-card" data-category="Lainnya">
+                        <div class="image-zoom">
+                            <img src="assets/images/berita/berita6_6.jpeg" alt="Lainnya">
+                            <span class="category-badge bg-iso-9001">Lainnya</span>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-date">01 Oktober 2025</p>
+                            <h3 class="card-title">Konsinyering Gugus Kendali Mutu (GKM) </h3>
+                            <p class="card-desc">Kegiatan benchmarking ini bertujuan untuk memperoleh gambaran praktik
+                                baik
+                                dalam pengelolaan penjaminan mutu.Konsinyering Gugus Kendali Mutu ini bertujuan untuk
+                                menyelaraskan pemahaman, meningkatkan kapasitas, serta memperkuat koordinasi GKM di
+                                lingkungan Politeknik Pariwisata NHI Bandung, khususnya dalam.
+                            </p>
+                            <!-- Data narasi panjang disimpan di hidden div atau dataset -->
+                            <div class="full-narration" style="display:none;">Jakarta, 1 Oktober 2025 — Pusat Penjaminan
+                                Mutu Poltekpar NHI Bandung menyelenggarakan kegiatan konsinyering Gugus Kendali Mutu
+                                (GKM) yang bertempat di Hotel Mercure Batavia, Jakarta. Kegiatan ini dilaksanakan
+                                sebagai upaya penguatan peran Gugus Kendali Mutu dalam mendukung implementasi Sistem
+                                Penjaminan Mutu Internal (SPMI) secara berkelanjutan.
+
+                                Konsinyering Gugus Kendali Mutu ini bertujuan untuk menyelaraskan pemahaman,
+                                meningkatkan kapasitas, serta memperkuat koordinasi GKM di lingkungan Politeknik
+                                Pariwisata NHI Bandung, khususnya dalam pelaksanaan siklus PPEPP (Penetapan,
+                                Pelaksanaan, Evaluasi, Pengendalian, dan Peningkatan) pada tingkat program studi dan
+                                unit kerja.
+
+                                Kegiatan diisi dengan pemaparan materi, diskusi, serta evaluasi terhadap pelaksanaan
+                                penjaminan mutu yang telah berjalan. Peserta konsinyering juga melakukan pembahasan
+                                terkait penyempurnaan dokumen mutu, hasil evaluasi akademik dan nonakademik, serta
+                                rencana tindak lanjut sebagai bagian dari strategi peningkatan mutu institusi.
+
+                                Melalui kegiatan konsinyering ini, diharapkan Gugus Kendali Mutu mampu menjalankan
+                                fungsi monitoring dan evaluasi secara lebih optimal, serta berperan aktif dalam
+                                membangun budaya mutu yang berkesinambungan di lingkungan Politeknik Pariwisata NHI
+                                Bandung.
+
+                                Kegiatan konsinyering Gugus Kendali Mutu ini menjadi komitmen Politeknik Pariwisata NHI
+                                Bandung dalam menjaga dan meningkatkan kualitas tata kelola pendidikan, sejalan dengan
+                                standar nasional pendidikan tinggi dan kebijakan pengembangan institusi di bidang
+                                pariwisata.</div>
+                        </div>
+                    </article>
+
+                    <!-- BERITA 4 -->
+                    <article onclick="openModal(this)" class="news-card" data-category="Tracer Study">
+                        <div class="image-zoom">
+                            <img src="assets/images/berita/berita3_1.jpeg" alt="Tracer Study">
+                            <span class="category-badge bg-tracer">Tracer Study</span>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-date">21 Juli 2025</p>
+                            <h3 class="card-title">Audit Mutu Internal (AMI) 2025</h3>
+                            <p class="card-desc">Pelaksanaan AMI 2025 mencakup 25 program studi, unit, pusat,
+                                dan bagian di Poltekpar.</p>
+                            <div class="full-narration" style="display:none;">Kegiatan Audit Mutu Internal (AMI) 2025
+                                dilaksanakan selama dua bulan, dimulai pada tanggal 21 Juli 2025 dengan acara opening
+                                AMI dan berakhir pada tanggal 25 September 2025 dengan acara closing AMI serta Rapat
+                                Tinjauan Manajemen. Pelaksanaan AMI 2025 mencakup 25 program studi, unit, pusat, dan
+                                bagian di Poltekpar NHI Bandung, melibatkan 25 auditor yang bekerja untuk memastikan
+                                bahwa seluruh proses dan kegiatan di institusi ini sesuai dengan standar mutu yang telah
+                                ditetapkan.
+
+                                AMI 2025 dipimpin oleh Lead Auditor, Ibu Ita Maemunah, yang memimpin tim dalam melakukan
+                                audit terhadap berbagai aspek yang ada di Poltekpar NHI Bandung. Selama pelaksanaan
+                                audit, ditemukan sebanyak 99 temuan yang mencakup berbagai hal yang perlu diperbaiki dan
+                                ditingkatkan dalam sistem manajemen mutu di institusi ini. Temuan-temuan tersebut
+                                mencakup berbagai aspek, mulai dari prosedur operasional hingga pengelolaan sumber daya
+                                yang perlu disesuaikan untuk mendukung peningkatan kualitas pendidikan dan layanan.
+
+                                Dengan adanya temuan-temuan tersebut, diharapkan dapat dilakukan perbaikan yang
+                                menyeluruh untuk meningkatkan mutu yang ada di Poltekpar NHI Bandung. Proses tindak
+                                lanjut dari temuan-temuan AMI ini diharapkan dapat menghasilkan perubahan yang positif,
+                                mendukung perbaikan berkelanjutan, serta memberikan kontribusi besar dalam pencapaian
+                                tujuan institusi dalam meningkatkan kualitas pendidikan dan pelayanan yang diberikan
+                                kepada mahasiswa dan masyarakat.</div>
+                        </div>
+                    </article>
+
+                    <!-- BERITA 3 -->
+                    <article onclick="openModal(this)" class="news-card" data-category="TedQual">
+                        <div class="image-zoom">
+                            <img src="assets/images/berita/berita2_2.jpg" alt="TedQual">
+                            <span class="category-badge bg-iso-21001">TedQual</span>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-date">20 Juli - 22 Juli 2025</p>
+                            <h3 class="card-title">Asesmen Lapangan Akreditasi BAN-PT Prodi Pengelolaan Usaha Rekreasi
+                            </h3>
+                            <p class="card-desc">ang memiliki keahlian dalam bidang pengelolaan usaha dan rekreasi
+                                Kegiatan ini juga.</p>
+                            <div class="full-narration" style="display:none;">Kegiatan Asesmen Lapangan Akreditasi
+                                BAN-PT untuk Program Studi Pengelolaan Usaha Rekreasi (PUR) di Politeknik Pariwisata NHI
+                                Bandung dilaksanakan pada tanggal 20-22 Juli 2025. Asesmen ini dipimpin oleh dua asesor,
+                                yaitu Dr. Amelda Pramezwary, A.Par., MM., CHE., dan Rini Kartika Hudiono, S.Pd., M.A.,
+                                yang memiliki keahlian dalam bidang pengelolaan usaha dan rekreasi. Kegiatan ini juga
+                                dihadiri oleh perwakilan dari BAN-PT, Ibu Zahrotul Latifah, yang turut serta dalam
+                                memantau jalannya proses asesmen.
+
+                                Berdasarkan hasil asesmen lapangan yang dilaksanakan, Program Studi PUR berhasil meraih
+                                peringkat Akreditasi Unggul. Sertifikat akreditasi dengan peringkat tersebut diterbitkan
+                                oleh BAN-PT pada tanggal 13 Agustus 2025. Pencapaian ini mencerminkan kualitas tinggi
+                                dari Program Studi PUR Politeknik Pariwisata NHI Bandung, yang berhasil memenuhi standar
+                                akreditasi nasional dalam penyelenggaraan pendidikan di bidang pengelolaan usaha
+                                rekreasi.</div>
+                        </div>
+                    </article>
+
+                    <!-- BERITA 2 -->
                     <article onclick="openModal(this)" class="news-card" data-category="ISO 9001">
                         <div class="image-zoom">
-                            <img src="assets/images/berita/berita1_1.jpg"
-                                alt="ISO 9001">
+                            <img src="assets/images/berita/berita1_1.jpg" alt="ISO 9001">
                             <span class="category-badge bg-iso-9001">ISO 9001</span>
                         </div>
                         <div class="card-content">
@@ -240,66 +419,64 @@
                             <p class="card-desc">kegiatan ini juga dihadiri oleh perwakilan BAN-PT, Ibu Sri Wahyuni
                                 yang turut mengisi.</p>
                             <!-- Data narasi panjang disimpan di hidden div atau dataset -->
-                            <div class="full-narration" style="display:none;">Kegiatan Asesmen Lapangan Akreditasi BAN-PT untuk Program Studi Usaha Perjalanan Wisata (UPW) di Politeknik Pariwisata NHI Bandung dilaksanakan pada tanggal 3–5 Juli 2025. Asesmen lapangan ini dilakukan oleh dua orang asesor, yaitu Prof. Dr. Diena Mutiara Lemy, A.Par., M.M., CHE., dan Ibu Maftucha, Dipl.Hot., S.E., M.Par., yang memiliki keahlian di bidangnya. Selain itu, kegiatan ini juga dihadiri oleh perwakilan BAN-PT, Ibu Sri Wahyuni, yang turut menyaksikan jalannya proses asesmen untuk memastikan kelancaran dan keakuratan evaluasi yang dilakukan.
+                            <div class="full-narration" style="display:none;">Kegiatan Asesmen Lapangan Akreditasi
+                                BAN-PT untuk Program Studi Usaha Perjalanan Wisata (UPW) di Politeknik Pariwisata NHI
+                                Bandung dilaksanakan pada tanggal 3–5 Juli 2025. Asesmen lapangan ini dilakukan oleh dua
+                                orang asesor, yaitu Prof. Dr. Diena Mutiara Lemy, A.Par., M.M., CHE., dan Ibu Maftucha,
+                                Dipl.Hot., S.E., M.Par., yang memiliki keahlian di bidangnya. Selain itu, kegiatan ini
+                                juga dihadiri oleh perwakilan BAN-PT, Ibu Sri Wahyuni, yang turut menyaksikan jalannya
+                                proses asesmen untuk memastikan kelancaran dan keakuratan evaluasi yang dilakukan.
 
-                                Berdasarkan hasil asesmen lapangan yang telah dilakukan, Program Studi UPW berhasil meraih peringkat Akreditasi Unggul. Peringkat ini tercermin dalam sertifikat akreditasi yang diterbitkan oleh BAN-PT pada tanggal 29 Juli 2025. Pencapaian ini menandakan bahwa Program Studi UPW Politeknik Pariwisata NHI Bandung telah memenuhi standar kualitas pendidikan yang tinggi dan diakui oleh lembaga akreditasi nasional, memberikan bukti atas komitmen institusi dalam penyelenggaraan pendidikan berkualitas di bidang pariwisata.</div>
+                                Berdasarkan hasil asesmen lapangan yang telah dilakukan, Program Studi UPW berhasil
+                                meraih peringkat Akreditasi Unggul. Peringkat ini tercermin dalam sertifikat akreditasi
+                                yang diterbitkan oleh BAN-PT pada tanggal 29 Juli 2025. Pencapaian ini menandakan bahwa
+                                Program Studi UPW Politeknik Pariwisata NHI Bandung telah memenuhi standar kualitas
+                                pendidikan yang tinggi dan diakui oleh lembaga akreditasi nasional, memberikan bukti
+                                atas komitmen institusi dalam penyelenggaraan pendidikan berkualitas di bidang
+                                pariwisata.</div>
                         </div>
                     </article>
 
-                    <!-- BERITA DUA -->
-                    <article onclick="openModal(this)" class="news-card" data-category="TeqDual">
+                    <!-- BERITA 1 -->
+                    <article onclick="openModal(this)" class="news-card" data-category="Lainnya">
                         <div class="image-zoom">
-                            <img src="assets/images/berita/berita2_2.jpg"
-                                alt="TeqDual">
-                            <span class="category-badge bg-teqdual">TeqDual</span>
+                            <img src="assets/images/berita/berita5_5.jpg" alt="Lainnya">
+                            <span class="category-badge bg-iso-9001">Lainnya</span>
                         </div>
                         <div class="card-content">
-                            <p class="card-date">20 Juli - 22 Juli 2025</p>
-                            <h3 class="card-title">Asesmen Lapangan Akreditasi BAN-PT Prodi Pengelolaan Usaha Rekreasi</h3>
-                            <p class="card-desc">ang memiliki keahlian dalam bidang pengelolaan usaha dan rekreasi
-                                Kegiatan ini juga.</p>
-                            <div class="full-narration" style="display:none;">Kegiatan Asesmen Lapangan Akreditasi BAN-PT untuk Program Studi Pengelolaan Usaha Rekreasi (PUR) di Politeknik Pariwisata NHI Bandung dilaksanakan pada tanggal 20-22 Juli 2025. Asesmen ini dipimpin oleh dua asesor, yaitu Dr. Amelda Pramezwary, A.Par., MM., CHE., dan Rini Kartika Hudiono, S.Pd., M.A., yang memiliki keahlian dalam bidang pengelolaan usaha dan rekreasi. Kegiatan ini juga dihadiri oleh perwakilan dari BAN-PT, Ibu Zahrotul Latifah, yang turut serta dalam memantau jalannya proses asesmen.
+                            <p class="card-date">30 Juli 2025</p>
+                            <h3 class="card-title">Benchmarking Universitas Pelita Harapan</h3>
+                            <p class="card-desc">Kegiatan benchmarking ini bertujuan untuk memperoleh gambaran praktik
+                                baik
+                                dalam pengelolaan penjaminan mutu.
+                            </p>
+                            <!-- Data narasi panjang disimpan di hidden div atau dataset -->
+                            <div class="full-narration" style="display:none;">Pusat Penjaminan Mutu (PPM) Politeknik
+                                Pariwisata NHI Bandung melaksanakan kegiatan benchmarking ke Universitas Pelita Harapan
+                                (UPH) pada tanggal 30 Juli 2025 sebagai bagian dari upaya penguatan dan peningkatan
+                                sistem penjaminan mutu internal perguruan tinggi.
 
-                                Berdasarkan hasil asesmen lapangan yang dilaksanakan, Program Studi PUR berhasil meraih peringkat Akreditasi Unggul. Sertifikat akreditasi dengan peringkat tersebut diterbitkan oleh BAN-PT pada tanggal 13 Agustus 2025. Pencapaian ini mencerminkan kualitas tinggi dari Program Studi PUR Politeknik Pariwisata NHI Bandung, yang berhasil memenuhi standar akreditasi nasional dalam penyelenggaraan pendidikan di bidang pengelolaan usaha rekreasi.</div>
-                        </div>
-                    </article>
+                                Kegiatan benchmarking ini bertujuan untuk memperoleh gambaran praktik baik (best
+                                practices) dalam pengelolaan penjaminan mutu, khususnya terkait implementasi Sistem
+                                Penjaminan Mutu Internal (SPMI), pengelolaan dokumen mutu, serta strategi peningkatan
+                                mutu akademik dan nonakademik yang telah diterapkan di Universitas Pelita Harapan.
 
-                    <!-- BERITA TIGA -->
-                    <article onclick="openModal(this)" class="news-card" data-category="Tracer Study">
-                        <div class="image-zoom">
-                            <img src="assets/images/berita/berita3_1.jpeg"
-                                alt="Tracer Study">
-                            <span class="category-badge bg-tracer">Tracer Study</span>
-                        </div>
-                        <div class="card-content">
-                            <p class="card-date">21 Juli 2025</p>
-                            <h3 class="card-title">Audit Mutu Internal (AMI) 2025</h3>
-                            <p class="card-desc">Pelaksanaan AMI 2025 mencakup 25 program studi, unit, pusat, 
-                                dan bagian di Poltekpar.</p>
-                            <div class="full-narration" style="display:none;">Kegiatan Audit Mutu Internal (AMI) 2025 dilaksanakan selama dua bulan, dimulai pada tanggal 21 Juli 2025 dengan acara opening AMI dan berakhir pada tanggal 25 September 2025 dengan acara closing AMI serta Rapat Tinjauan Manajemen. Pelaksanaan AMI 2025 mencakup 25 program studi, unit, pusat, dan bagian di Poltekpar NHI Bandung, melibatkan 25 auditor yang bekerja untuk memastikan bahwa seluruh proses dan kegiatan di institusi ini sesuai dengan standar mutu yang telah ditetapkan.
-                                
-                                AMI 2025 dipimpin oleh Lead Auditor, Ibu Ita Maemunah, yang memimpin tim dalam melakukan audit terhadap berbagai aspek yang ada di Poltekpar NHI Bandung. Selama pelaksanaan audit, ditemukan sebanyak 99 temuan yang mencakup berbagai hal yang perlu diperbaiki dan ditingkatkan dalam sistem manajemen mutu di institusi ini. Temuan-temuan tersebut mencakup berbagai aspek, mulai dari prosedur operasional hingga pengelolaan sumber daya yang perlu disesuaikan untuk mendukung peningkatan kualitas pendidikan dan layanan.
+                                Rombongan Pusat Penjaminan Mutu Poltekpar NHI Bandung disambut oleh perwakilan unit
+                                penjaminan mutu Universitas Pelita Harapan. Dalam kegiatan tersebut, kedua institusi
+                                melakukan diskusi dan pertukaran informasi terkait kebijakan mutu, siklus PPEPP
+                                (Penetapan, Pelaksanaan, Evaluasi, Pengendalian, dan Peningkatan), pemanfaatan teknologi
+                                informasi dalam penjaminan mutu, serta tantangan dan solusi dalam menjaga keberlanjutan
+                                budaya mutu di lingkungan perguruan tinggi.
 
-                                Dengan adanya temuan-temuan tersebut, diharapkan dapat dilakukan perbaikan yang menyeluruh untuk meningkatkan mutu yang ada di Poltekpar NHI Bandung. Proses tindak lanjut dari temuan-temuan AMI ini diharapkan dapat menghasilkan perubahan yang positif, mendukung perbaikan berkelanjutan, serta memberikan kontribusi besar dalam pencapaian tujuan institusi dalam meningkatkan kualitas pendidikan dan pelayanan yang diberikan kepada mahasiswa dan masyarakat.</div>
-                        </div>
-                    </article>
+                                Melalui kegiatan benchmarking ini, diharapkan Pusat Penjaminan Mutu Poltekpar NHI
+                                Bandung dapat mengadopsi dan mengadaptasi praktik-praktik unggul yang relevan untuk
+                                mendukung peningkatan kualitas tata kelola pendidikan, sejalan dengan standar nasional
+                                pendidikan tinggi dan arah kebijakan Kementerian Pariwisata.
 
-                    <!-- BERITA EMPAT -->
-                    <article onclick="openModal(this)" class="news-card" data-category="ISO 21001">
-                        <div class="image-zoom">
-                            <img src="assets/images/berita/berita4_1.jpeg"
-                                alt="ISO 21001">
-                            <span class="category-badge bg-iso-21001">ISO 21001</span>
+                                Kegiatan ini juga menjadi momentum untuk memperkuat jejaring kerja sama antarperguruan
+                                tinggi dalam rangka pengembangan mutu pendidikan tinggi yang berkelanjutan dan
+                                berorientasi pada peningkatan layanan akademik kepada sivitas akademika.</div>
                         </div>
-                        <div class="card-content">
-                            <p class="card-date">3 November - 4 November 2025</p>
-                            <h3 class="card-title">Surveilance ISO 21001:2018</h3>
-                            <p class="card-desc">Tujuan dari kegiatan ini adalah untuk memastikan bahwa Poltekpar
-                                NHI Bandung tetap.</p>
-                            <div class="full-narration" style="display:none;">Kegiatan Surveillance ISO 21001:2018 di Politeknik Pariwisata NHI Bandung dilaksanakan pada tanggal 3-4 November 2025 dan dipimpin oleh auditor, Ibu Renatha Hutapea. Audit ini dilakukan secara sampling, mencakup Program Studi DIK, SKU, PPH, PKA, Unit Perpustakaan, Unit TI&Komblik, serta Unit ICC. Tujuan dari kegiatan ini adalah untuk memastikan bahwa Poltekpar NHI Bandung tetap mematuhi standar sistem manajemen mutu ISO 21001:2018, serta mengevaluasi berbagai aspek yang ada di program studi dan unit-unit tersebut.
-                                
-                                Dari hasil audit, auditor memberikan beberapa rekomendasi perbaikan yang berfokus pada peningkatan mutu di berbagai sektor. Rekomendasi tersebut diharapkan dapat menjadi dasar untuk perbaikan berkelanjutan di Poltekpar NHI Bandung, sehingga dapat meningkatkan kualitas sistem manajemen mutu yang ada dan mendukung pengembangan pendidikan serta layanan yang lebih efisien dan efektif di masa mendatang.
-                              </div>
                     </article>
 
                 </div>
@@ -401,9 +578,6 @@
 
     <section class="features3 cid-soHi3mDdTR mbr-parallax-background" id="features3-e">
 
-
-
-
         <div class="container">
             <div class="media-container-row">
                 <div class="card p-3 col-12 col-md-6 col-lg-3">
@@ -470,8 +644,6 @@
 
     <section class="section-table cid-spPm40q5jz" id="table1-32">
 
-
-
         <div class="container container-table">
             <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
                 Dasar Hukum&nbsp;</h2>
@@ -506,13 +678,7 @@
 
                         <tbody>
 
-
-
-
                             <tr>
-
-
-
 
                                 <td class="body-item mbr-fonts-style display-7">Peraturan dan Perundang-undangan</td>
                                 <td class="body-item mbr-fonts-style display-7"><a
@@ -536,18 +702,12 @@
                             </tr>
                             <tr>
 
-
-
-
                                 <td class="body-item mbr-fonts-style display-7">Standar Nasional Dan Internasional</td>
                                 <td class="body-item mbr-fonts-style display-7">Sistem Penjaminan Mutu Internal -
                                     Perguruan Tinggi (PPEPP)<br>ISO 9001 : 2015 - Quality Manajemen System
                                     (QMS)<br>UNWTO - TedQual Certification</td>
                             </tr>
                             <tr>
-
-
-
 
                                 <td class="body-item mbr-fonts-style display-7">Peraturan Internal</td>
                                 <td class="body-item mbr-fonts-style display-7">Statuta STP Bandung<br>Standar Nasional
@@ -591,8 +751,9 @@
                                         data-toggle="modal" data-bs-toggle="modal"><img
                                             src="assets/images/20210218-133628-2000x941-800x450.jpeg" alt="ISO 9001 "
                                             title=""><span class="icon-focus"></span><span
-                                            class="mbr-gallery-title mbr-fonts-style display-7">Audit Management Representative ISO 9001 :
-                                                2015</a></span></div>
+                                            class="mbr-gallery-title mbr-fonts-style display-7">Audit Management
+                                            Representative ISO 9001 :
+                                            2015</a></span></div>
                                 </div>
                                 <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false"
                                     data-tags="ISO 9001">
@@ -827,14 +988,9 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <section class="mbr-section content5 cid-v77UzVlD2b mbr-parallax-background" id="content5-yb">
-
-
-
-
 
         <div class="container">
             <div class="media-container-row">
@@ -846,8 +1002,6 @@
                         NHI Bandung yang telah berdiri sejak tahun 2013. Kami berkomitmen untuk terus meningkatkan
                         pelaksanaan Tri Dharma Perguruan Tinggi sesuai dengan standar yang mencakup Penetapan,
                         Pelaksanaan, Evaluasi, Pengendalian, dan Peningkatan (PPEPP).</h3>
-
-
                 </div>
             </div>
         </div>
@@ -858,7 +1012,7 @@
         <div class="container">
             <div class="inner-container" style="width: 100%;">
                 <hr class="line" style="width: 25%;">
-                <div class="section-text align-center mbr-fonts-style display-2">"Countinous Quality Improvement"</div>
+                <div class="section-text align-center mbr-fonts-style display-2">"Continuous Quality Improvement"</div>
                 <hr class="line" style="width: 25%;">
             </div>
         </div>
@@ -885,14 +1039,13 @@
                         <strong>Links</strong>
                         <br>
                         <br><a href="https://poltekpar-nhi.ac.id/" class="text-primary" target="_blank"><u>Official
-                                Web</u></a><br><u><a href="https://sbmpoltekpar.kemenpar.go.id/" class="text-primary"
-                                target="_blank">PMB Seleksi Bersama</a><br></u><em><u><a href="TracerStudy.html"
-                                    class="text-primary">Tracer Study</a></u></em><br><u><a
-                                href="https://journal.poltekpar-nhi.ac.id/" class="text-primary"
-                                target="_blank">e-Journal</a></u><br><a
-                            href="http://enhaiipreneur.poltekpar-nhi.ac.id/public/" class="text-primary"
-                            target="_blank"><u>Enhaiipreneur Center</u></a><a
-                            href="http://tracerstudy.stp-bandung.ac.id/" class="text-primary"><br></a><br><br>
+                                Web</u></a><br>
+                        <em><u><a href="TracerStudy.html" class="text-primary">Tracer Study</a></u></em><br>
+                        <u><a href="https://journal.poltekpar-nhi.ac.id/" class="text-primary"
+                                target="_blank">e-Journal</a></u><br>
+                        <a href="http://enhaiipreneur.poltekpar-nhi.ac.id/public/" class="text-primary"
+                            target="_blank"><u>Enhaiipreneur Center</u></a>
+                        <a href="http://tracerstudy.stp-bandung.ac.id/" class="text-primary"><br></a><br><br>
                     </p>
                 </div>
                 <div class="col-12 col-md-6">
@@ -935,8 +1088,6 @@
                                     <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
                                 </a>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -974,7 +1125,7 @@
 
     <input name="animation" type="hidden">
 
-     <script>
+    <script>
         function scrollNews(direction) {
             const slider = document.getElementById('newsSlider');
             const scrollAmount = 324;
@@ -1027,7 +1178,7 @@
 
             const colorMap = {
                 'ISO 9001': '#0ea5e9',
-                'TeqDual': '#10b981',
+                'TedQual': '#10b981',
                 'Tracer Study': '#0ea5e9',
                 'ISO 21001': '#f43f5e'
             };
