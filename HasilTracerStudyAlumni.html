@@ -31,6 +31,76 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=AEs2RA"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=AEs2RA" type="text/css">
 
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+        }
+        
+        h1 {
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            color: #222;
+        }
+
+        .tab-btn {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 400;
+            transition: all 0.25s ease;
+            color: #666;
+            background-color: transparent;
+            border: 1.5px solid #999;
+            letter-spacing: 0.01em;
+        }
+
+        .tab-btn.active {
+            background-color: #5b9bd5;
+            color: white;
+            border-color: #5b9bd5;
+        }
+
+        .tab-btn:hover:not(.active) {
+            border-color: #5b9bd5;
+            color: #5b9bd5;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+        }
+
+        .chart-container {
+            min-height: 500px;
+            margin-bottom: 20px;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .custom-select {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235b9bd5' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+            border: 2px solid #e2e8f0;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -230,11 +300,6 @@
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item"><a class="nav-link mbr-fonts-style active display-7" role="tab" data-toggle="tab" href="#tabs4-3n_tab0">
                             Lihat Sebaran</a></li>
-                    
-                    
-                    
-                    
-                    
                 </ul>
                 <div class="tab-content">
                     <div id="tab1" class="tab-pane in active" role="tabpanel">
@@ -298,173 +363,250 @@
 
     
 
-    
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl mb-4">
+                Profil Alumni Politeknik Pariwisata NHI Bandung
+            </h1>
+        </header>
 
-    <div class="container">
-        <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
-           Profil Alumni Politeknik Pariwisata NHI Bandung</h2>
-        
-    </div>
-    <div class="container-fluid">
-        <div class="row tabcont">
-            <ul class="nav nav-tabs pt-3 mt-5" role="tablist">
-                <li class="nav-item mbr-fonts-style"><a class="nav-link active display-7" role="tab" data-toggle="tab" href="#tabs3-1g_tab0" aria-selected="true">Kegiatan Setelah Lulus</a></li>
-                <li class="nav-item mbr-fonts-style"><a class="nav-link show active display-7" role="tab" data-toggle="tab" href="#tabs3-1g_tab1" aria-selected="true">
-                        Masa Tunggu</a></li>
-                <li class="nav-item mbr-fonts-style"><a class="nav-link show active display-7" role="tab" data-toggle="tab" href="#tabs3-1g_tab2" aria-selected="true">
-                        Profil Pekerjaan</a></li>
-                <li class="nav-item mbr-fonts-style"><a class="nav-link show active display-7" role="tab" data-toggle="tab" href="#tabs3-1g_tab3" aria-selected="true">
-                        Profil Usaha</a></li>
-                <li class="nav-item mbr-fonts-style"><a class="nav-link show active display-7" role="tab" data-toggle="tab" href="#tabs3-1g_tab4" aria-selected="true">Level Pekerjaan</a></li>
-                <li class="nav-item mbr-fonts-style"><a class="nav-link show active display-7" role="tab" data-toggle="tab" href="#tabs3-1g_tab5" aria-selected="true">Kesamaan Pekerjaan</a></li>
-            </ul>
+        <!-- Kategori Navigasi -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button onclick="switchTab('transisi', this)" class="tab-btn active px-8 py-4 rounded-full text-lg">
+                Transisi Lulusan
+            </button>
+            <button onclick="switchTab('tunggu', this)" class="tab-btn px-8 py-4 rounded-full text-lg">
+                Waktu Tunggu Lulusan Sebelum Bekerja/Wirausaha
+            </button>
+            <button onclick="switchTab('sektor', this)" class="tab-btn px-8 py-4 rounded-full text-lg">
+                Sebaran Sektor Lulusan
+            </button>
+            <button onclick="switchTab('regional', this)" class="tab-btn px-8 py-4 rounded-full text-lg">
+                Sebaran Regional Lulusan
+            </button>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="row px-1">
-            <div class="tab-content">
-                <div id="tab1" class="tab-pane in active mbr-table" role="tabpanel">
-                    <div class="row tab-content-row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="card-img ">
-                                <span class="mbri-responsive mbr-iconfont"></span>
-                            </div>
-                            <h4 class="mbr-element-title align-center mbr-fonts-style pb-2 display-5">
-                                MOBILE FRIENDLY
-                            </h4>
-                            <p class="mbr-section-text align-center mbr-fonts-style display-7">
-                                No special actions required, all sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site, it will adapt automagically.
-                            </p>
-                        </div>
-
-                        
-
-                        
-
-                        
-                    </div>
+        <div class="content-card p-8 md:p-12">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
+                <div id="chart-title" class="text-2xl font-medium text-gray-800 tracking-tight">
+                    Visualisasi Data: Kegiatan Setelah Lulus
                 </div>
 
-                <div id="tab2" class="tab-pane  mbr-table" role="tabpanel">
-                    <div class="row tab-content-row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="card-img ">
-                                <span class="mbri-bootstrap mbr-iconfont"></span>
-                            </div>
-                            <h4 class="mbr-element-title align-center mbr-fonts-style pb-2 display-5">
-                                IT'S EASY AND SIMPLE
-                            </h4>
-                            <p class="mbr-section-text align-center mbr-fonts-style display-7">
-                                Cut down the development time with drag-and-drop website builder. Drop the blocks into the page, edit content inline and publish - no technical skills required.
-                            </p>
-                        </div>
-
-                        
-
-                        
-
-                        
-                    </div>
+                <!-- Filter Tahun (Hanya 2023 & 2024) -->
+                <div class="flex items-center gap-4">
+                    <span class="text-gray-400 font-medium">Tahun Kelulusan</span>
+                    <select id="year-select" onchange="updateYear()" class="custom-select bg-white text-blue-600 px-6 py-3 pr-12 rounded-2xl shadow-sm cursor-pointer border-none ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-400 transition-all outline-none">
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
                 </div>
+            </div>
+            
+            <div id="content-display" class="fade-in">
+                <!-- Area Grafik Utama -->
+                <div id="main_chart" class="chart-container w-full"></div>
+            </div>
 
-                <div id="tab3" class="tab-pane  mbr-table" role="tabpanel">
-                    <div class="row tab-content-row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="card-img ">
-                                <span class="mbri-extension mbr-iconfont"></span>
-                            </div>
-                            <h4 class="mbr-element-title align-center mbr-fonts-style pb-2 display-5">
-                                TRENDY WEBSITE BLOCKS
-                            </h4>
-                            <p class="mbr-section-text align-center mbr-fonts-style display-7">
-                                Choose from the large selection  pre-made blocks - full-screen intro, bootstrap carousel, slider, responsive image gallery with, parallax scrolling, sticky header and more.
-                            </p>
-                        </div>
-
-                        
-
-                        
-
-                        
-                    </div>
+            <div class="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between gap-8">
+                <div class="max-w-2xl">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Analisis Statistik</h3>
+                    <p id="chart-desc" class="text-gray-500 leading-relaxed text-base">
+                        Menampilkan status kegiatan utama lulusan setelah menyelesaikan masa pendidikan.
+                    </p>
                 </div>
-
-                <div id="tab4" class="tab-pane  mbr-table" role="tabpanel">
-                    <div class="row tab-content-row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="card-img ">
-                                <span class="mbri-responsive mbr-iconfont"></span>
-                            </div>
-                            <h4 class="mbr-element-title align-center mbr-fonts-style pb-2 display-5">
-                                MOBILE FRIENDLY
-                            </h4>
-                            <p class="mbr-section-text align-center mbr-fonts-style display-7">
-                                No special actions required, all sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site, it will adapt automagically.
-                            </p>
-                        </div>
-
-                        
-
-                        
-
-                        
-                    </div>
-                </div>
-
-                <div id="tab5" class="tab-pane  mbr-table" role="tabpanel">
-                    <div class="row tab-content-row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="card-img ">
-                                <span class="mbri-bootstrap mbr-iconfont"></span>
-                            </div>
-                            <h4 class="mbr-element-title align-center mbr-fonts-style pb-2 display-5">
-                                IT'S EASY AND SIMPLE
-                            </h4>
-                            <p class="mbr-section-text align-center mbr-fonts-style display-7">
-                                Cut down the development time with drag-and-drop website builder. Drop the blocks into the page, edit content inline and publish - no technical skills required.
-                            </p>
-                        </div>
-
-                        
-
-                        
-
-                        
-                    </div>
-                </div>
-
-                <div id="tab6" class="tab-pane  mbr-table" role="tabpanel">
-                    <div class="row tab-content-row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="card-img ">
-                                <span class="mbri-extension mbr-iconfont"></span>
-                            </div>
-                            <h4 class="mbr-element-title align-center mbr-fonts-style pb-2 display-5">
-                                TRENDY WEBSITE BLOCKS
-                            </h4>
-                            <p class="mbr-section-text align-center mbr-fonts-style display-7">
-                                Choose from the large selection  pre-made blocks - full-screen intro, bootstrap carousel, slider, responsive image gallery with, parallax scrolling, sticky header and more.
-                            </p>
-                        </div>
-
-                        
-
-                        
-
-                        
-                    </div>
+                <div class="flex items-center gap-3 text-sm font-semibold text-orange-600 bg-orange-50 px-6 py-4 rounded-2xl h-fit">
+                    <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 102 0h-2V7z"/></svg>
+                    Statistik diperbarui Februari 2025
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        
+        let currentTab = 'transisi';
+        let currentYear = '2023';
+
+        const chartData = {
+            '2023': {
+                'transisi': { 
+                    title: 'Kegiatan Setelah Lulus', 
+                    type: 'pie_exploded', 
+                    data: [
+                        ['Status', 'Persentase'],
+                        ['Bekerja', 82],
+                        ['Belum bekerja/sedang mencari pekerjaan', 7],
+                        ['Berwirausaha', 8],
+                        ['Belum ingin bekerja...', 0],
+                        ['Melanjutkan pendidikan', 3]
+                    ], 
+                    desc: 'Analisis menunjukkan tingkat keterserapan lulusan yang sangat tinggi, di mana 82% alumni langsung memasuki dunia kerja profesional. Mencerminkan kualitas lulusan yang kompetitif dan siap pakai di industri.' 
+                },
+                'tunggu': { 
+                    title: 'Masa Tunggu Memperoleh Pekerjaan Pertama', 
+                    type: 'donut', 
+                    data: [
+                        ['Kategori', 'Persentase'],
+                        ['Sebelum Lulus', 39.3],
+                        ['Setelah Lulus', 60.7]
+                    ], 
+                    desc: 'Data masa tunggu mengungkapkan efektivitas kemitraan industri; sebanyak 39.3% lulusan telah mendapatkan kepastian kerja sebelum proses wisuda dilaksanakan. Mayoritas lulusan lainnya mendapatkan pekerjaan dalam rentang waktu yang relatif singkat setelah kelulusan.' 
+                },
+                'sektor': { 
+                    title: 'Sebaran Sektor Lulusan', 
+                    type: 'pie_exploded', 
+                    data: [
+                        ['Kategori', 'Persentase'],
+                        ['Sektor Pariwisata', 74.1],
+                        ['Sektor Ekonomi Kreatif', 10.1],
+                        ['Bukan Sektor Pariwisata', 15.8]
+                    ], 
+                    desc: 'Mayoritas alumni (74%) berkarier secara linear di Sektor Pariwisata. Menunjukkan kesesuaian kompetensi yang diajarkan dengan kebutuhan pasar.'
+                },
+                'regional': { 
+                    title: 'Sebaran Regional Lulusan', 
+                    type: 'pie', 
+                    data: [
+                        ['Wilayah', 'Jumlah'], 
+                        ['Luar Negeri', 20], 
+                        ['Dalam Negeri', 80]
+                    ], 
+                    desc: 'Lokasi geografis penempatan kerja alumni 2023.' }
+            },
+            '2024': {
+                'transisi': { 
+                    title: 'Kegiatan Setelah Lulus', 
+                    type: 'pie_exploded', 
+                    data: [
+                        ['Status', 'Persentase'],
+                        ['Bekerja', 82.7],
+                        ['Belum bekerja/sedang mencari pekerjaan', 7.9],
+                        ['Berwirausaha', 6.1],
+                        ['Belum ingin bekerja', 1],
+                        ['Melanjutkan pendidikan', 2.3]
+                    ], 
+                    desc: 'Analisis menunjukkan tingkat keterserapan lulusan yang sangat tinggi, di mana 82,7% alumni langsung memasuki dunia kerja profesional. Mencerminkan kualitas lulusan yang kompetitif dan siap pakai di industri.' 
+                },
+                'tunggu': { 
+                    title: 'Masa Tunggu Lulusan', 
+                    type: 'donut', 
+                    data: [['Kategori', 'Jumlah'], ['Sebelum Lulus', 34.1], ['Setelah Lulus', 65.9]], 
+                    desc: 'Data masa tunggu mengungkapkan efektivitas kemitraan industri; sebanyak 34.1% lulusan telah mendapatkan kepastian kerja sebelum proses wisuda dilaksanakan. Mayoritas lulusan lainnya mendapatkan pekerjaan dalam rentang waktu yang relatif singkat setelah kelulusan.' 
+                },
+                'sektor': { 
+                    title: 'Sebaran Sektor Lulusan', 
+                    type: 'pie_exploded', 
+                    data: [
+                        ['Kategori', 'Persentase'],
+                        ['Sektor Pariwisata', 77],
+                        ['Sektor Ekonomi Kreatif', 11.5],
+                        ['Bukan Sektor Pariwisata', 11.5]
+                    ], 
+                    desc: 'Mayoritas alumni (77%) berkarier secara linear di Sektor Pariwisata. Menunjukkan kesesuaian kompetensi yang diajarkan dengan kebutuhan pasar.'
+                },
+                'regional': { 
+                    title: 'Sebaran Regional Lulusan', 
+                    type: 'pie', 
+                    data: [
+                        ['Wilayah', 'Jumlah'], 
+                        ['Luar Negeri', 12], 
+                        ['Dalam Negeri', 88]
+                    ], 
+                    desc: 'Lokasi geografis penempatan kerja alumni 2024.' }
+            },
+        };
+
+        google.charts.setOnLoadCallback(() => drawChart());
+
+        function updateYear() {
+            currentYear = document.getElementById('year-select').value;
+            refreshView();
+        }
+
+        function switchTab(tabId, btn) {
+            currentTab = tabId;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            refreshView();
+        }
+
+        function refreshView() {
+            const item = chartData[currentYear][currentTab];
+            const display = document.getElementById('content-display');
+            display.classList.remove('fade-in');
+            void display.offsetWidth;
+            display.classList.add('fade-in');
+
+            document.getElementById('chart-title').innerText = `Visualisasi Data: ${item.title} (${currentYear})`;
+            document.getElementById('chart-desc').innerText = item.desc;
+            drawChart();
+        }
+
+        function drawChart() {
+            const item = chartData[currentYear][currentTab];
+            const data = google.visualization.arrayToDataTable(item.data);
+            const container = document.getElementById('main_chart');
+            
+            // Pengaturan Area Grafik diperkecil agar tidak mepet legenda
+            let options = {
+                height: 500,
+                chartArea: {width: '75%', height: '65%', top: 40, bottom: 80},
+                fontName: 'Outfit',
+                backgroundColor: 'transparent',
+                legend: { 
+                    position: 'bottom', 
+                    textStyle: { color: '#555', fontSize: 13 },
+                    maxLines: 2
+                },
+                animation: { startup: true, duration: 800, easing: 'out' }
+            };
+
+            if (item.type === 'pie_exploded') {
+                options = {
+                    ...options,
+                    colors: ['#3366cc', '#aaaaaa', '#ffbb33', '#dddddd', '#ff8800'],
+                    slices: { 
+                        0: { offset: 0.15 },
+                        1: { offset: 0.1 }, 
+                        2: { offset: 0.1 } 
+                    },
+                    pieSliceText: 'percentage',
+                    sliceVisibilityThreshold: 0
+                };
+                new google.visualization.PieChart(container).draw(data, options);
+            } 
+            else if (item.type === 'donut') {
+                options = {
+                    ...options,
+                    pieHole: 0.5,
+                    colors: ['#3366cc', '#e67e22'],
+                    pieSliceText: 'percentage',
+                    pieSliceTextStyle: { fontSize: 16, bold: true },
+                    legend: { position: 'bottom', alignment: 'center' }
+                };
+                new google.visualization.PieChart(container).draw(data, options);
+            }
+            else if (item.type === 'bar') {
+                options = {
+                    ...options,
+                    colors: ['#3366cc'],
+                    hAxis: { gridlines: { color: '#f3f3f3' } },
+                    chartArea: {width: '70%', height: '70%'}
+                };
+                new google.visualization.BarChart(container).draw(data, options);
+            } else {
+                options = { ...options, colors: ['#3366cc', '#f97316', '#fbbf24'] };
+                new google.visualization.PieChart(container).draw(data, options);
+            }
+        }
+
+        window.addEventListener('resize', drawChart);
+    </script>
+    
 </section>
 
 <section class="cid-tzFHRuNj8t" id="footer2-7z">
-
-    
-
-    
 
     <div class="container">
         <div class="media-container-row content mbr-white">
