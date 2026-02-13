@@ -320,7 +320,7 @@
                             aria-expanded="false" data-toggle="dropdown-submenu">Tracer Study</a>
                         <div class="dropdown-menu"><a class="text-white dropdown-item text-primary display-4"
                                 href="TracerStudy.html" aria-expanded="false">Halaman&nbsp;</a><a
-                                class="text-white dropdown-item text-primary display-4" href="HASILTSALUMNI.html"
+                                class="text-white dropdown-item text-primary display-4" href="HasilTracerStudyAlumni.html"
                                 aria-expanded="false">Hasil Penilaian Alumni</a><a
                                 class="text-white dropdown-item text-primary display-4" href="HasilTracerStudyUser.html"
                                 aria-expanded="false">Hasil Penilaian User</a></div>
@@ -481,6 +481,10 @@
                 <div class="filter-group">
                     <span class="filter-label">Tahun Kelulusan</span>
                     <select id="year-select" onchange="updateYear()" class="custom-select">
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
                     </select>
@@ -619,9 +623,197 @@
         google.charts.load('current', {'packages':['corechart']});
         
         let currentTab = 'transisi';
-        let currentYear = '2023';
+        let currentYear = '2019';
 
         const chartData = {
+            '2019': {
+                    'transisi': {
+                        title: 'Kegiatan Setelah Lulus',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Status', 'Persentase'],
+                            ['Bekerja', 65],
+                            ['Belum bekerja/sedang mencari pekerjaan', 18],
+                            ['Berwirausaha', 13],
+                            ['Melanjutkan pendidikan', 4]
+                        ],
+                        desc: 'Analisis menunjukkan tingkat keterserapan lulusan yang sangat tinggi, di mana 65% alumni langsung memasuki dunia kerja profesional. Mencerminkan kualitas lulusan yang kompetitif dan siap pakai di industri.'
+                    },
+                    'tunggu': {
+                        title: 'Masa Tunggu Memperoleh Pekerjaan Pertama',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sebelum Lulus', 36],
+                            ['Setelah Lulus', 48],
+                            ['Saya Tidak Mencari Pekerjaan', 15]
+                        ],
+                        desc: 'Data masa tunggu mengungkapkan efektivitas kemitraan industri; sebanyak 36% lulusan telah mendapatkan kepastian kerja sebelum proses wisuda dilaksanakan. Mayoritas lulusan lainnya mendapatkan pekerjaan dalam rentang waktu yang relatif singkat setelah kelulusan.'
+                    },
+                    'sektor': {
+                        title: 'Sebaran Sektor Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sektor Pariwisata', 79],
+                            ['Bukan Sektor Pariwisata', 21]
+                        ],
+                        desc: 'Mayoritas alumni (79%) berkarier secara linear di Sektor Pariwisata. Menunjukkan kesesuaian kompetensi yang diajarkan dengan kebutuhan pasar.'
+                    },
+                    'regional': {
+                        title: 'Sebaran Regional Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Wilayah', 'Jumlah'],
+                            ['Luar Negeri', 12],
+                            ['Dalam Negeri', 88]
+                        ],
+                        desc: 'Lokasi geografis penempatan kerja alumni 2019.'
+                    }
+                },
+
+            '2020': {
+                    'transisi': {
+                        title: 'Kegiatan Setelah Lulus',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Status', 'Persentase'],
+                            ['Bekerja', 67.06],
+                            ['Belum bekerja/sedang mencari pekerjaan', 14.93],
+                            ['Berwirausaha', 11.85],
+                            ['Beelum Memungkinkan Bekerja', 0.71],
+                            ['Melanjutkan pendidikan', 5.45]
+                        ],
+                        desc: 'Analisis menunjukkan tingkat keterserapan lulusan yang sangat tinggi, di mana 67.06% alumni langsung memasuki dunia kerja profesional. Mencerminkan kualitas lulusan yang kompetitif dan siap pakai di industri.'
+                    },
+                    'tunggu': {
+                        title: 'Masa Tunggu Memperoleh Pekerjaan Pertama',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sebelum Lulus', 19.93],
+                            ['Setelah Lulus', 80.07]
+                        ],
+                        desc: 'Data masa tunggu mengungkapkan efektivitas kemitraan industri; sebanyak 19.03% lulusan telah mendapatkan kepastian kerja sebelum proses wisuda dilaksanakan. Mayoritas lulusan lainnya mendapatkan pekerjaan dalam rentang waktu yang relatif singkat setelah kelulusan.'
+                    },
+                    'sektor': {
+                        title: 'Sebaran Sektor Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sektor Pariwisata', 52.10],
+                            ['Bukan Sektor Pariwisata', 47.90],
+                            ['Sektor Ekonomi Kreatif', 7.56]
+                        ],
+                        desc: 'Mayoritas alumni (52.10%) berkarier secara linear di Sektor Pariwisata. Menunjukkan kesesuaian kompetensi yang diajarkan dengan kebutuhan pasar.'
+                    },
+                    'regional': {
+                        title: 'Sebaran Regional Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Wilayah', 'Jumlah'],
+                            ['Luar Negeri', 12.45],
+                            ['Dalam Negeri', 87.45]
+                        ],
+                        desc: 'Lokasi geografis penempatan kerja alumni 2020.'
+                    }
+                },
+
+            '2021': {
+                    'transisi': {
+                        title: 'Kegiatan Setelah Lulus',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Status', 'Persentase'],
+                            ['Bekerja', 74.85],
+                            ['Belum bekerja/sedang mencari pekerjaan', 11.11],
+                            ['Berwirausaha', 11.11],
+                            ['Beelum Memungkinkan Bekerja', 0.29],
+                            ['Melanjutkan pendidikan', 2.63]
+                        ],
+                        desc: 'Analisis menunjukkan tingkat keterserapan lulusan yang sangat tinggi, di mana 74.85% alumni langsung memasuki dunia kerja profesional. Mencerminkan kualitas lulusan yang kompetitif dan siap pakai di industri.'
+                    },
+                    'tunggu': {
+                        title: 'Masa Tunggu Memperoleh Pekerjaan Pertama',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sebelum Lulus', 42.62],
+                            ['Setelah Lulus', 52.46],
+                            ['Saya Tidak Mencari Pekerjaan', 4.92]
+                        ],
+                        desc: 'Data masa tunggu mengungkapkan efektivitas kemitraan industri; sebanyak 42.62% lulusan telah mendapatkan kepastian kerja sebelum proses wisuda dilaksanakan. Mayoritas lulusan lainnya mendapatkan pekerjaan dalam rentang waktu yang relatif singkat setelah kelulusan.'
+                    },
+                    'sektor': {
+                        title: 'Sebaran Sektor Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sektor Pariwisata', 77.88],
+                            ['Bukan Sektor Pariwisata', 22.12],
+                            ['Sektor Ekonomi Kreatif', 13.46]
+                        ],
+                        desc: 'Mayoritas alumni (77.88%) berkarier secara linear di Sektor Pariwisata. Menunjukkan kesesuaian kompetensi yang diajarkan dengan kebutuhan pasar.'
+                    },
+                    'regional': {
+                        title: 'Sebaran Regional Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Wilayah', 'Jumlah'],
+                            ['Luar Negeri', 20],
+                            ['Dalam Negeri', 80]
+                        ],
+                        desc: 'Lokasi geografis penempatan kerja alumni 2021.'
+                    }
+                },
+
+            '2022': {
+                    'transisi': {
+                        title: 'Kegiatan Setelah Lulus',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Status', 'Persentase'],
+                            ['Bekerja', 86],
+                            ['Belum bekerja/sedang mencari pekerjaan', 5],
+                            ['Berwirausaha', 3],
+                            ['Beelum Memungkinkan Bekerja', 0.5],
+                            ['Melanjutkan pendidikan', 6]
+                        ],
+                        desc: 'Analisis menunjukkan tingkat keterserapan lulusan yang sangat tinggi, di mana 86% alumni langsung memasuki dunia kerja profesional. Mencerminkan kualitas lulusan yang kompetitif dan siap pakai di industri.'
+                    },
+                    'tunggu': {
+                        title: 'Masa Tunggu Memperoleh Pekerjaan Pertama',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sebelum Lulus', 42.1],
+                            ['Setelah Lulus', 57.9]
+                        ],
+                        desc: 'Data masa tunggu mengungkapkan efektivitas kemitraan industri; sebanyak 42.1% lulusan telah mendapatkan kepastian kerja sebelum proses wisuda dilaksanakan. Mayoritas lulusan lainnya mendapatkan pekerjaan dalam rentang waktu yang relatif singkat setelah kelulusan.'
+                    },
+                    'sektor': {
+                        title: 'Sebaran Sektor Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Kategori', 'Persentase'],
+                            ['Sektor Pariwisata', 74.1],
+                            ['Bukan Sektor Pariwisata', 20],
+                            ['Sektor Ekonomi Kreatif', 5.9]
+                        ],
+                        desc: 'Mayoritas alumni (74.1%) berkarier secara linear di Sektor Pariwisata. Menunjukkan kesesuaian kompetensi yang diajarkan dengan kebutuhan pasar.'
+                    },
+                    'regional': {
+                        title: 'Sebaran Regional Lulusan',
+                        type: 'pie_exploded',
+                        data: [
+                            ['Wilayah', 'Jumlah'],
+                            ['Luar Negeri', 19],
+                            ['Dalam Negeri', 81]
+                        ],
+                        desc: 'Lokasi geografis penempatan kerja alumni 2022.'
+                    }
+                },
+
             '2023': {
                     'transisi': {
                         title: 'Kegiatan Setelah Lulus',
